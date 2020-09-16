@@ -148,9 +148,9 @@ function initSvgElements(svg, data)
         svgElementsContainer[i].circle = circle;
         svg.appendChild(circle);
 
-        svgElementsContainer[i].vertical = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].yValue), yScale(svg, data[i].yValue), "rgb(255,0,0)", "2");
-        svgElementsContainer[i].horisontalTop = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].topValue), yScale(svg, data[i].topValue), "rgb(255,0,0)", "2");
-        svgElementsContainer[i].horisontalBot = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].botValue), yScale(svg, data[i].botValue), "rgb(255,0,0)", "2");
+        svgElementsContainer[i].vertical = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].yValue), yScale(svg, data[i].yValue), circleColour, "2");
+        svgElementsContainer[i].horisontalTop = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].topValue), yScale(svg, data[i].topValue), circleColour, "2");
+        svgElementsContainer[i].horisontalBot = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].botValue), yScale(svg, data[i].botValue), circleColour, "2");
     }
 }
 
