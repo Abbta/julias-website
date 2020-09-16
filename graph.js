@@ -26,7 +26,7 @@ const backgroundBoxColour = "#cdcdcd55";
 var svgElementsContainer = new Array;
 const animationDelay = 0;
 const animationDuration = 0;
-const maxFrames = 15;
+const maxFrames = 0;
 
 var g_graphState = 0;
 
@@ -123,11 +123,18 @@ function addToGraph(svg, graphState, data) {
     if (graphState < 2) {
         for (let i = graphStateArray[graphState][0]; i <= graphStateArray[graphState][1]; i++)
         {
-
-            /*setTimeout(animateCircleIn, animationDelay * i, svgElementsContainer[i].circle);
-            setTimeout(animateVerticalIn, animationDelay * i, svgElementsContainer[i].vertical, svg, data[i]);
-            setTimeout(animateHorisontalIn, animationDelay * i + animationDuration, svgElementsContainer[i].horisontalTop, svgElementsContainer[i].horisontalBot, svg, i, i == 0 ? true : false);
-            */
+            if (animationDelay > 0)
+            {
+                setTimeout(animateCircleIn, animationDelay * i, svgElementsContainer[i].circle);
+                setTimeout(animateVerticalIn, animationDelay * i, svgElementsContainer[i].vertical, svg, data[i]);
+                setTimeout(animateHorisontalIn, animationDelay * i + animationDuration, svgElementsContainer[i].horisontalTop, svgElementsContainer[i].horisontalBot, svg, i, i == 0 ? true : false);
+            }
+            else
+            {
+                animateCircleIn(svgElementsContainer[i].circle);
+                animateVerticalIn(svgElementsContainer[i].vertical, svg, data[i]);
+                animateHorisontalIn(svgElementsContainer[i].horisontalTop, svgElementsContainer[i].horisontalBot, svg, i, i == 0 ? true : false);
+            }
         }
         if (graphState == 1)
         {
