@@ -229,7 +229,7 @@ a:hover{
 }
 
 .graphTitle{
-    font-family: 'Open Sans';
+    font-family: 'Palatino';
     font-size: 32px;
 }
 
@@ -275,22 +275,22 @@ a:hover{
 }
 
 .yAxisMarker {
-    font-family: 'Nunito';
+    font-family: 'Palatino';
     font-size: 14px;
 }
 
 .yAxisText {
-    font-family: 'Nunito';
+    font-family: 'Palatino';
     font-size: 24px;
 }
 
 .xAxisMarker {
-    font-family: 'Nunito';
+    font-family: 'Palatino';
     font-size: 14px;
 }
 
 .xAxisText {
-    font-family: 'Nunito';
+    font-family: 'Palatino';
     font-size: 24px;
 }
 

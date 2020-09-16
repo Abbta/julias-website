@@ -1,18 +1,18 @@
 const yValues = [
     -0.02, 0.045, -0.004, -0.01, -0.03, -0.02, -0.06, -0.03, -0.003, -0.01, 0, -0.02, -0.07, -0.02, -0.04, -0.04, -0.03, -0.04, -0.085, -0.014, -0.011, 0.03, -0.05, 0, -0.02
 ]
-const backgroundYValues = [0.15, 0.1, 0.05, 0, -0.05, -0.1, -.15];
+const backgroundYValues = [0.1, 0.05, 0, -0.05, -0.1, -0.15, -0.2];
 const circleColour = "#8f2018";
 const circleRadius = 5;
 const horisLength = 0.6;
 const dataMargin = 0.05;
-const yDistance = 0.35
-const yMin = -0.17;
+const yDistance = 0.35;
+const yMin = -0.13;
 const graphPaddingX = 50;
 const yAxisMarkerWidth = 15;
 const yAxisTextPadding = 17;
-const yAxisLetterWidth = 3;
-const yAxisText = "y axis text";
+const yAxisLetterWidth = 4;
+const yAxisText = "Coefficient estimate";
 const xAxisMarkerHeight = yAxisMarkerWidth;
 const xAxisTextPadding = yAxisTextPadding;
 const xAxisLetterWidth = 7;
@@ -26,7 +26,7 @@ const backgroundBoxColour = "#cdcdcd55";
 var svgElementsContainer = new Array;
 const animationDelay = 0;
 const animationDuration = 0;
-const maxFrames = 0;
+const maxFrames = 0.001;
 
 var g_graphState = 0;
 
@@ -94,13 +94,13 @@ const dataBotValueIndex = 3;
 function formatData(file, data)
 {
     file = file.split("#");
-    for (let i = dataStartIndex; i < file.length; i++)
+    for (let i = file.length - 1; i >= dataStartIndex; i--)
     {
         file[i] = file[i].split(",");
         data.push(new Object);
-        data[i-dataStartIndex].yValue = parseFloat(file[i][dataYValueIndex]);
-        data[i-dataStartIndex].topValue = parseFloat(file[i][dataTopValueIndex]);
-        data[i-dataStartIndex].botValue = parseFloat(file[i][dataBotValueIndex]);
+        data[file.length - 1 - i].yValue = parseFloat(file[i][dataYValueIndex]);
+        data[file.length - 1 - i].topValue = parseFloat(file[i][dataTopValueIndex]);
+        data[file.length - 1 - i].botValue = parseFloat(file[i][dataBotValueIndex]);
     }
     graphStateArray = [
         [11, data.length - 1],
@@ -147,7 +147,7 @@ function initSvgElements(svg, data)
 {
     svgElementsContainer.push(new Object);
     svgElementsContainer[0].rect = addBackgroundRect(svg, graphStateArray[1][1]);
-    svgElementsContainer[0].dashed = addDashedLine(svg, 17);
+    svgElementsContainer[0].dashed = addDashedLine(svg, 19);
     for (var i = 0; i < data.length; i++) {
         svgElementsContainer.push(new Object);
         var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
