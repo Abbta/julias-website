@@ -159,7 +159,7 @@ a:hover{
 }
 
 .title {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Palatino', serif;
     font-size: 28px;
     text-align: center;
 }
@@ -173,10 +173,10 @@ a:hover{
 }
 
 .body-text {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Palatino', serif;
     text-align: justify;
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 18px;
     color: #353535;
     z-index: 2;
 }
@@ -299,5 +299,16 @@ a:hover{
 }
 
 .research-text{
-    text-align: left !important;
+    text-align: justify !important;
+    margin-right: 20%;
+    padding-bottom: 50px;
+}
+
+
+.research-title {
+    font-family: 'Palatino', serif;
+    font-size: 28px;
+    text-align: Left;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
