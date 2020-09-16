@@ -2,6 +2,7 @@ const yValues = [
     -0.02, 0.045, -0.004, -0.01, -0.03, -0.02, -0.06, -0.03, -0.003, -0.01, 0, -0.02, -0.07, -0.02, -0.04, -0.04, -0.03, -0.04, -0.085, -0.014, -0.011, 0.03, -0.05, 0, -0.02
 ]
 const backgroundYValues = [0.15, 0.1, 0.05, 0, -0.05, -0.1, -.15];
+const circleColour = "#8f2018";
 const circleRadius = 5;
 const horisLength = 0.6;
 const dataMargin = 0.05;
@@ -143,13 +144,13 @@ function initSvgElements(svg, data)
         circle.setAttributeNS(null, "cx", xScale(svg, i));
         circle.setAttributeNS(null, "cy", yScale(svg, data[i].yValue));
         circle.setAttributeNS(null, "r", 0);
-        circle.setAttributeNS(null, "fill", "red");
+        circle.setAttributeNS(null, "fill", circleColour);
         svgElementsContainer[i].circle = circle;
         svg.appendChild(circle);
 
-        svgElementsContainer[i].vertical = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].yValue), yScale(svg, data[i].yValue), "rgb(255,0,0)", "2");
-        svgElementsContainer[i].horisontalTop = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].topValue), yScale(svg, data[i].topValue), "rgb(255,0,0)", "2");
-        svgElementsContainer[i].horisontalBot = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].botValue), yScale(svg, data[i].botValue), "rgb(255,0,0)", "2");
+        svgElementsContainer[i].vertical = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].yValue), yScale(svg, data[i].yValue), circleColour, "2");
+        svgElementsContainer[i].horisontalTop = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].topValue), yScale(svg, data[i].topValue), circleColour, "2");
+        svgElementsContainer[i].horisontalBot = addLine(svg, xScale(svg, i), xScale(svg, i), yScale(svg, data[i].botValue), yScale(svg, data[i].botValue), circleColour, "2");
     }
 }
 
