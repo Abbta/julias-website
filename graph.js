@@ -24,8 +24,8 @@ const graphTitle = "High School Graduate by age 19";
 const graphTitleLetterWidth = 11;
 const backgroundBoxColour = "#cdcdcd55";
 var svgElementsContainer = new Array;
-const animationDelay = 50;
-const animationDuration = 300;
+const animationDelay = 0;
+const animationDuration = 0;
 const maxFrames = 15;
 
 var g_graphState = 0;
@@ -121,10 +121,13 @@ function xScale(element, xValue, withPadding = true) {
 
 function addToGraph(svg, graphState, data) {
     if (graphState < 2) {
-        for (let i = graphStateArray[graphState][0]; i <= graphStateArray[graphState][1]; i++) {
-            setTimeout(animateCircleIn, animationDelay * i, svgElementsContainer[i].circle);
+        for (let i = graphStateArray[graphState][0]; i <= graphStateArray[graphState][1]; i++)
+        {
+
+            /*setTimeout(animateCircleIn, animationDelay * i, svgElementsContainer[i].circle);
             setTimeout(animateVerticalIn, animationDelay * i, svgElementsContainer[i].vertical, svg, data[i]);
             setTimeout(animateHorisontalIn, animationDelay * i + animationDuration, svgElementsContainer[i].horisontalTop, svgElementsContainer[i].horisontalBot, svg, i, i == 0 ? true : false);
+            */
         }
         if (graphState == 1)
         {
@@ -198,15 +201,25 @@ function initBot(bot, svg) {
 function animateCircleIn(circle) {
     let time = Date.now();
     var oStop = 1000;
-    window.requestAnimationFrame(circleAnimation);
-    function circleAnimation() {
+    if (animationDuration > 0)
+    {
+        window.requestAnimationFrame(circleAnimation);
+    }
+    else
+    {
+        circleAnimation();
+    }
+    function circleAnimation()
+    {
         let waitTo = time + (animationDuration / circleRadius);
         circle.setAttributeNS(null, "r", parseInt(circle.getAttributeNS(null, "r")) + 1);
-        while (time < waitTo) {
+        while (time < waitTo)
+        {
             time = Date.now();
         }
         oStop--;
-        if ((parseInt(circle.getAttributeNS(null, "r")) < circleRadius) && (oStop > 0)) {
+        if ((parseInt(circle.getAttributeNS(null, "r")) < circleRadius) && (oStop > 0))
+        {
             window.requestAnimationFrame(circleAnimation);
         }
     }

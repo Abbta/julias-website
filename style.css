@@ -292,3 +292,11 @@ a:hover{
     font-family: 'Nunito';
     font-size: 24px;
 }
+
+.top-padding{
+    padding-top: 150px;
+}
+
+.research-text{
+    text-align: left !important;
+}
