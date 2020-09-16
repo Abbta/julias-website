@@ -147,6 +147,7 @@ a:hover{
 .about-author-text {
     flex: 2;
     margin-left: 10px;
+    margin-top: 20px;
 }
 
 .image {
