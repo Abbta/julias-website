@@ -1,1 +1,96 @@
-Hello World!
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="header-container" class="header-container-before">
+            <a href="/" id="author-name" class="author-name-before"> Julia Tanndal </a>
+            <div id="pages-buttons" class="pages-buttons-before">
+                <div class="page-button">
+                    <a href="/"> Home </a>
+                </div>
+                <div class="page-button">
+                    <a href="/research"> Research </a>
+                </div>
+                <div class="page-button">
+                    <a href="/teaching"> Teaching </a>
+                </div>
+            </div>
+        </div>
+        <div id="header-border">
+            <div id="header-border-visible" class="header-border-before"></div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="about-author">
+                <div id="julia" class="author-portrait">
+                    <img src="julia_portrait.jpg" class="image" />
+                </div>
+                <div class="body-text about-author-text">
+                    I am a Ph.D. Candidate at the Department of Economics at Brown University. I will be on the job market in 2020-2021 and attend the ASSA Meetings and EEA Meetings
+                    <br /><br />
+                    My research focuses on public and labor economics, with a focus on intergenerational transmission of economic prospects.
+                    <br /><br />
+                    In my job market paper I study how economic shocks to parents affect the educational outcomes and career paths of children.
+                </div>
+            </div>
+            <div class="abstract">
+                <div class="title">
+                    Job Market Paper
+                </div>
+                <div class="title subtitle">
+                    Parent layoffs and children’s careers
+                </div>
+                <div class="abstract-text body-text">
+                    Abstract: <br />
+                    This paper estimates the effect of parent unemployment on their children’s educational outcomes. By matching parents who get laid off to parents in the same set of firms who remain employed, we find a negative impact on high school enrollment and completion for children who experience family layoff when they are age 15. In particular, the effects are concentrated to the layoffs that happen right before the high school application deadline, which suggests that the parent layoff has a negative impact on high school choice. The effects are larger when the family-level information cost of the high school choice is higher, and when the layoff is large.
+
+                </div>
+                <div class="body-text">
+                    we match families with parent layoffs to control families who are connected to a firm with layoffs. We observe a decrease in likelihood of graduating high school on time (at age 19) for children whose parents get laid off when the child is 14 to 16 years old.
+                </div>
+            </div>
+            <div id="graph-placeholder">
+                <div id="graph-container">
+                    <svg id="graph-top"></svg>
+                    <div class="graph-middle">
+                        <svg id="graph-left"></svg>
+                        <svg id="graph" class="graph"></svg>
+                    </div>
+                    <svg id="graph-bot" class="graph-middle-bot"></svg>
+                </div>
+            </div>
+            <div class="body-text graph-overlay-text">
+                To estimate selection into layoff, we add families with older children at the time of layoff. A parental layoff at age 21 can not affect high school graduation at age 19.
+                <br /><br />
+                <br /><br />
+                Now continue scrolling to get the next figure up
+
+            </div>
+            <div class="graph-text-divider"></div>
+            <div class="body-text graph-overlay-text">
+                we match families with parent layoffs to control families who are connected to a firm with layoffs. We observe a decrease in likelihood of graduating high school on time (at age 19) for children whose parents get laid off when the child is 14 to 16 years old.
+            </div>
+            <div class="graph-text-divider"></div>
+            <div class="paper-link-container graph-overlay-text">
+                <div class="body-text">
+                    read the paper
+                </div>
+                <a class="body-text paper-link"> here </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <script src="graph.js"></script>
+        <script src="header.js"></script>
+    </footer>
+</body>
+
+
+</html>

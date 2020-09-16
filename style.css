@@ -1,0 +1,294 @@
+body {
+    width: 100%;
+    margin: 0px;
+}
+
+#header-container {
+    background-color: #ffffff;
+    padding-top: 24px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.header-container-before {
+    transition: all 0.1s ease-in 0.0s;
+    padding-bottom: 24px;
+}
+
+.header-container-after {
+    padding-bottom: 0px;
+    height: 31px;
+    transition: all 0.1s ease-in 0.1s;
+}
+
+#header-border {
+    position: fixed;
+    width: 100%;
+    height: 2px;
+    top: 80px;
+    z-index: 101;
+}
+
+#header-border-visible {
+    background-color: #5656ff;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    position: relative;
+}
+
+.header-border-before {
+    width: 300px;
+    top: 0px;
+    transition: width 0.3s ease, top 0.1s ease-in 0.0s;
+}
+
+.header-border-after {
+    width: 100%;
+    top: -25px;
+    transition: width 0.3s ease 0.0s, top 0.1s ease-in 0.1s;
+}
+
+#author-name {
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: all 0.3s ease 0.0s;
+}
+
+.author-name-before {
+    font-size: 48px;
+    text-align: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.author-name-after {
+    font-size: 24px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#pages-buttons {
+    position: absolute;
+    right: 50px;
+    display: flex;
+}
+
+.pages-buttons-before{
+    bottom: 24px;
+}
+
+.pages-buttons-after{
+    bottom: 0px;
+}
+
+.page-button {
+    padding: 3px;
+    padding-right: 18px;
+    align-self: center;
+}
+a { 
+    text-decoration: none; font-size: 24px; color: black;
+}
+a:hover{
+    color: gray; 
+}
+
+@media screen and (min-width: 920px) {
+    .content {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .about-author {
+            padding-top: 90px;
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        .about-author {
+            padding-top: 90px;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+    }
+}
+
+@media screen and (max-width: 919px) {
+    .content {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-author {
+        padding-top: 90px;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.author-portrait {
+    flex: 1;
+}
+
+.about-author-text {
+    flex: 2;
+    margin-left: 10px;
+}
+
+.image {
+    width: 400px;
+}
+
+.abstract {
+    margin-top: 150px;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 30px;
+}
+
+.abstract-text {
+    padding-top: 20px;
+}
+
+.body-text {
+    font-family: 'Noto Serif', serif;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #353535;
+    z-index: 2;
+}
+
+#graph-placeholder {
+    margin-top: 500px;
+    width: 1px;
+    height: 1px;
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    z-index: -10;
+    margin-bottom: 400px;
+}
+
+#graph-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 260px;
+    right: 350px;
+    width: 700px;
+    height: 495px;
+    background-color: white;
+}
+
+#graph-left {
+    width: 130px;
+    height: 100%;
+}
+
+#graph-bot {
+    width: 100%;
+    height: 80px;
+}
+
+.graph-right {
+    width: 50px;
+}
+
+.graph-middle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+#graph-top {
+    height: 70px;
+}
+
+.graphTitle{
+    font-family: 'Open Sans';
+    font-size: 32px;
+}
+
+.graph-middle-bot {
+    height: 70px;
+}
+
+.graph {
+    width: 100%;
+    height: 100%;
+}
+
+.graph-overlay-text {
+    width: 700px;
+    background-color: white;
+    z-index: 50;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph-text-divider {
+    padding: 300px;
+}
+
+.paper-link-container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 190px;
+    margin-bottom: 20px;
+}
+
+.paper-link { 
+    display: inline;
+    text-align: center;
+    padding-left: 5px;
+    color: #5656ff;
+    cursor: pointer;
+}
+
+.paper-link:hover{
+    color: #7676ff; 
+}
+
+.yAxisMarker {
+    font-family: 'Nunito';
+    font-size: 14px;
+}
+
+.yAxisText {
+    font-family: 'Nunito';
+    font-size: 24px;
+}
+
+.xAxisMarker {
+    font-family: 'Nunito';
+    font-size: 14px;
+}
+
+.xAxisText {
+    font-family: 'Nunito';
+    font-size: 24px;
+}
