@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body style="margin: 0px;">
+    <header>
+        <div id="header-container" class="header-container-before">
+            <a href="/" id="author-name" class="author-name-before"> Julia Tanndal </a>
+            <div id="pages-buttons" class="pages-buttons-before">
+                <div class="page-button">
+                    <a href="/"> Home </a>
+                </div>
+                <div class="page-button">
+                    <a href="/CV"> CV </a>
+                </div>
+                <div class="page-button">
+                    <a href="/research"> Research </a>
+                </div>
+                <div class="page-button">
+                    <a href="/teaching"> Teaching </a>
+                </div>
+            </div>
+        </div>
+        <div id="header-border">
+            <div id="header-border-visible" class="header-border-before"></div>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="top-padding"></div>
+            <div class="title research-text">
+                Family-level stress and children's educational choice: Evidence from parent layoffs
+            </div>
+            <div class="abstract-text body-text research-text">
+                Miika Päällysaho and Julia Tanndal
+We analyse the effect of a parent's layoff on the educational outcome of their children. We use administrative data on layoffs caused by shocks to labor demand and variation in child age at the time of parent layoff to estimate the age-specific impact on high school graduation rates. We find that parent layoff may have a large impact on high school completion rates, but the effect is concentrated to children who are about to apply to high school. A parent layoff in the month before the school choice deadline decreases the likelihood for the child to finish high school on time by 9 percentage points relative to a layoff in the same school semester, but after the deadline. The effect is higher for low-information families, consistent with the hypothesis that making the right choice may be costly, even if the final good is free.
+
+            </div>
+            
+        <div class="title research-text">
+                Drivers of the Ethnic Mobility Gap in Sweden
+            </div>
+            <div class="abstract-text body-text research-text">
+            This paper describes how intergenerational mobility differ between ethnic groups in Sweden. Conditional on parent income, non-European second-generation immigrants do substantially worse than native men or second-generation immigrants from Europe, with expected earnings 8-13 rank percentiles lower than their native peers. This gap in mobility is significant for all levels of parent income, but does not affect women. The paper tracks the mobility gap in different outcomes over the life cycle and find that only 25 percent of the gap can be observed before labor market entry, and that nothing is attributable to a gap in observable skills. Employment and labor market sorting are the big drivers of the earnings gap in the lower end of the distribution. This particular age profile of the gap highlights that equality of childhood opportunity may not be sufficient to equalize outcomes on a labor market where ethnic discrimination is present.
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <script src="header.js"></script>
+    </footer>
+</body>
+
+
+</html>
