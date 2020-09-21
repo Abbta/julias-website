@@ -9,6 +9,7 @@ body {
     position: fixed;
     width: 100%;
     z-index: 100;
+    display: flex;
 }
 
 .header-container-before {
@@ -36,6 +37,7 @@ body {
     margin-right: auto;
     height: 100%;
     position: relative;
+    z-index: 4;
 }
 
 .header-border-before {
@@ -55,6 +57,7 @@ body {
     color: black;
     display: block;
     transition: all 0.3s ease 0.0s;
+    z-index: 4;
 }
 
 .author-name-before {
@@ -71,13 +74,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    padding-left: 15px;
-}
-
-#pages-buttons {
-    position: absolute;
-    right: 50px;
-    display: flex;
+    margin-left: 105px;
 }
 
 .pages-buttons-before{
@@ -100,32 +97,24 @@ a:hover{
     color: gray; 
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 1125px) {
     .content {
         width: 65%;
         margin-left: auto;
         margin-right: auto;
     }
 
-    @media screen and (min-width: 1200px) {
-        .about-author {
-            padding-top: 90px;
-            display: flex;
-            width: 100%;
-        }
+    .about-author {
+        padding-top: 90px;
+        display: flex;
+        width: 100%;
     }
 
-    @media screen and (max-width: 1199px) {
-        .about-author {
-            padding-top: 90px;
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-        }
-    }
+    #pages-buttons { position: absolute; right: 50px; display: flex; }
+
 }
 
-@media screen and (max-width: 919px) {
+@media screen and (max-width: 1125px) {
     .content {
         width: 90%;
         margin-left: auto;
@@ -138,6 +127,52 @@ a:hover{
         width: 100%;
         flex-direction: column;
     }
+
+
+    #header-background { height: 80px; width: 100%; background-color: #ffffff; z-index: 3; position: absolute; top: -24px; }
+
+    #hamburger-icon { display: flex !important; }
+
+    #pages-buttons {
+        display: flex;
+        position: absolute;
+        left: 0px;
+        padding-left: 25px;
+        top: -200px;
+        padding-top: 25px;
+        transition: top 1s ease 0s;
+        flex-direction: column;
+        z-index: 0;
+        background-color: #ffffff;
+        height: 145px;
+    }
+
+    .pages-buttons-after { bottom: 0px; border-right: 2px solid #5656ff; }
+}
+
+@media screen and (max-width: 750px)
+{
+    .yAxisMarker { font-family: 'Palatino'; font-size: 12px; }
+
+    .yAxisText { font-family: 'Palatino'; font-size: 18px; }
+
+    .xAxisMarker { font-family: 'Palatino'; font-size: 12px; }
+
+    .xAxisText { font-family: 'Palatino'; font-size: 18px; }
+    .graphTitle { font-family: 'Palatino'; font-size: 28px; }
+    #graph-container { display: flex; flex-direction: column; position: relative; bottom: 160px; right: 250px; width: 500px; height: 350px; background-color: white; }
+}
+@media screen and (min-width: 751px)
+{
+    .yAxisMarker { font-family: 'Palatino'; font-size: 14px; }
+
+    .yAxisText { font-family: 'Palatino'; font-size: 24px; }
+
+    .xAxisMarker { font-family: 'Palatino'; font-size: 14px; }
+
+    .xAxisText { font-family: 'Palatino'; font-size: 24px; }
+    .graphTitle { font-family: 'Palatino'; font-size: 32px; }
+    #graph-container { display: flex; flex-direction: column; position: relative; bottom: 260px; right: 350px; width: 700px; height: 495px; background-color: white; }
 }
 
 .author-portrait {
@@ -193,16 +228,6 @@ a:hover{
     margin-bottom: 400px;
 }
 
-#graph-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 260px;
-    right: 350px;
-    width: 700px;
-    height: 495px;
-    background-color: white;
-}
 
 #graph-left {
     width: 130px;
@@ -222,16 +247,11 @@ a:hover{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 
 #graph-top {
     height: 70px;
-}
-
-.graphTitle{
-    font-family: 'Palatino';
-    font-size: 32px;
 }
 
 .graph-middle-bot {
@@ -275,26 +295,6 @@ a:hover{
     color: #7676ff; 
 }
 
-.yAxisMarker {
-    font-family: 'Palatino';
-    font-size: 14px;
-}
-
-.yAxisText {
-    font-family: 'Palatino';
-    font-size: 24px;
-}
-
-.xAxisMarker {
-    font-family: 'Palatino';
-    font-size: 14px;
-}
-
-.xAxisText {
-    font-family: 'Palatino';
-    font-size: 24px;
-}
-
 .top-padding{
     padding-top: 250px;
 }
@@ -312,4 +312,91 @@ a:hover{
     text-align: Left;
     padding-top: 50px;
     padding-bottom: 20px;
+}
+
+#hamburger-icon{
+    display: none;
+}
+
+.hamburger-icon { 
+    height: 35px; 
+    width: 53px;
+    position: absolute; 
+    left: 7px;
+    top: 5px;
+    cursor: pointer;
+    z-index: 4;
+    top: 16px;
+}
+
+.hamburger-icon.clicked{
+    width: 53px;
+    height: 40px;
+}
+
+.hamburger-icon > span { 
+    width: 30px;
+    height: 5px;
+    background-color: #000000;
+    border-radius: 3px;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    position: absolute;
+}
+.hamburger-icon span:nth-child(odd) {
+    left: 0px;
+}
+.hamburger-icon span:nth-child(even) {
+    left: 22px;
+}
+.hamburger-icon span:nth-child(-n+2) { 
+    top: 0px;
+}
+.hamburger-icon span:nth-child(n+3):nth-child(-n+4) { 
+    top: 12px;
+}
+.hamburger-icon span:nth-child(n+5):nth-child(-n+6) { 
+    top: 24px;
+}
+#hamburger-icon.clicked span:nth-child(1), #hamburger-icon.clicked span:nth-child(6) { 
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#hamburger-icon.clicked span:nth-child(2), #hamburger-icon.clicked span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#hamburger-icon.clicked span:nth-child(1) {
+    left: 5px;
+    top: 7px;
+}
+#hamburger-icon.clicked span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 7px;
+}
+
+#hamburger-icon.clicked span:nth-child(3) { 
+    left: -50%;
+    opacity: 0;
+}
+
+#hamburger-icon.clicked span:nth-child(4) { 
+    left: 100%;
+    opacity: 0;
+}
+
+#hamburger-icon.clicked span:nth-child(5) { 
+    left: 5px;
+    top: 24px;
+}
+
+#hamburger-icon.clicked span:nth-child(6) { 
+    left: calc(50% - 5px);
+    top: 24px; 
 }

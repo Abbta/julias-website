@@ -26,3 +26,18 @@ var headerScroll = function () {
         pagesButtons.classList.remove("pages-buttons-after");
     }
 }
+
+document.getElementById("hamburger-icon").onclick = function ()
+{
+    const menu = document.getElementById("pages-buttons");
+    if (this.classList.contains("clicked"))
+    {
+        this.classList.remove("clicked");
+        menu.style.top = "-200px";
+    }
+    else
+    {
+        this.classList.add("clicked");
+        menu.style.top = "50px";
+    }
+}
