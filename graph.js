@@ -12,7 +12,7 @@ const graphPaddingX = 50;
 const yAxisMarkerWidth = 15;
 const yAxisTextPadding = 17;
 const yAxisLetterWidth = 4;
-const yAxisText = "Coefficient estimate";
+const yAxisText = "Coefficient estimates";
 const xAxisMarkerHeight = yAxisMarkerWidth;
 const xAxisTextPadding = yAxisTextPadding;
 const xAxisLetterWidth = 7;
@@ -20,7 +20,7 @@ const xAxisDisplayIndices = [2, 6, 10, 14, 18, 22];
 const xAxisDisplayFirst = 24;
 const xAxisDisplayValuePerIndex = -2;
 const xAxisText = "Age at parent's layoff";
-const graphTitle = "High School Graduate by age 19";
+const graphTitle = "High school graduation rates by age 19";
 const graphTitleLetterWidth = 11;
 const backgroundBoxColour = "#cdcdcd55";
 var svgElementsContainer = new Array;
@@ -60,7 +60,7 @@ function onLoad()
         const svg = document.getElementById("graph");
         const graphHolder = document.getElementById("graph-placeholder");
         const graph_overlay_texts = document.getElementsByClassName("graph-overlay-text");
-        if (graph_overlay_texts[g_graphState - 1].offsetTop < graphHolder.offsetTop - svg.scrollHeight / 2) {
+        if (graph_overlay_texts[g_graphState - 0].offsetTop < graphHolder.offsetTop - svg.scrollHeight / 2) {
             //if text to transition between current and next state is above marker 
             addToGraph(svg, g_graphState, g_data);
             g_graphState++;

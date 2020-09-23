@@ -99,7 +99,7 @@ a:hover{
 
 @media screen and (min-width: 1125px) {
     .content {
-        width: 65%;
+        width: 60%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -186,14 +186,16 @@ a:hover{
     flex: 2;
     margin-left: 10px;
     margin-top: 20px;
+    font-size: 20px;
 }
 
 .image {
-    width: 400px;
+    width: 300px;
 }
 
 .abstract {
     margin-top: 150px;
+
 }
 
 .title {
@@ -208,6 +210,7 @@ a:hover{
 
 .abstract-text {
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .body-text {
@@ -275,6 +278,7 @@ a:hover{
     margin-right: auto;
     width: 190px;
     margin-bottom: 20px;
+    padding-bottom: 100px;
 }
 
 .paper-link { 
