@@ -1,6 +1,9 @@
 const headerTransitionStart = 10;
 
-var headerScroll = function () {
+window.onscroll = function ()
+{
+    if (typeof graphScroll != "undefined")
+        graphScroll();
     const headerBorder = document.getElementById("header-border-visible");
     const authorName = document.getElementById("author-name");
     const headerContainer = document.getElementById("header-container");

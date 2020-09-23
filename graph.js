@@ -56,8 +56,7 @@ function onLoad()
     addToGraph(document.getElementById("graph"), g_graphState, g_data);
     g_graphState++;
 
-    window.onscroll = function () {
-        headerScroll();
+    graphScroll = function () {
         const svg = document.getElementById("graph");
         const graphHolder = document.getElementById("graph-placeholder");
         const graph_overlay_texts = document.getElementsByClassName("graph-overlay-text");
