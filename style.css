@@ -293,10 +293,12 @@ a:hover{
     padding-top: 250px;
 }
 
-.research-text{
-    text-align: justify !important;
-    margin-right: 20%;
-    padding-bottom: 50px;
+@media screen and (max-width: 740px) {
+    .research-text { text-align: justify !important; padding-bottom: 50px; }
+}
+@media screen and (min-width: 741px)
+{
+    .research-text { text-align: justify !important; margin-right: 20%; padding-bottom: 50px; }
 }
 
 
