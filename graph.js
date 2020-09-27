@@ -55,18 +55,7 @@ function onLoad()
     initSvgElements(svg, g_data);
     addToGraph(document.getElementById("graph"), g_graphState, g_data);
     g_graphState++;
-
-    graphScroll = function () {
-        const svg = document.getElementById("graph");
-        const graphHolder = document.getElementById("graph-placeholder");
-        const graph_overlay_texts = document.getElementsByClassName("graph-overlay-text");
-        if (graph_overlay_texts[g_graphState - 0].offsetTop < graphHolder.offsetTop - svg.scrollHeight / 2) {
-            //if text to transition between current and next state is above marker 
-            addToGraph(svg, g_graphState, g_data);
-            g_graphState++;
-        }
-
-    }
+    addToGraph(svg, g_graphState, g_data);
 }
 
 function getCsvData()
@@ -234,7 +223,12 @@ function animateCircleIn(circle) {
 function animateVerticalIn(vertical, svg, data) {
     let time = Date.now();
     var oStop = 1000;
-    window.requestAnimationFrame(verticalAnimation);
+    if (animationDuration > 0) {
+        window.requestAnimationFrame(verticalAnimation);
+    }
+    else {
+        verticalAnimation();
+    }
     function verticalAnimation() {
         let waitTo;
         let pixelsByFrame;
@@ -244,7 +238,10 @@ function animateVerticalIn(vertical, svg, data) {
         }
         else {
             waitTo = time + (animationDuration / maxFrames)
-            pixelsByFrame = yScale(svg, data.botValue - data.yValue) / maxFrames;
+            if (maxFrames >= 1)
+                pixelsByFrame = yScale(svg, data.botValue - data.yValue) / maxFrames;
+            else
+                pixelsByFrame = yScale(svg, data.botValue - data.yValue);
         }
         vertical.setAttributeNS(null, "y1", parseInt(vertical.getAttributeNS(null, "y1")) - pixelsByFrame);
         vertical.setAttributeNS(null, "y2", parseInt(vertical.getAttributeNS(null, "y2")) + pixelsByFrame);

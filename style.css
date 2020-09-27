@@ -223,14 +223,12 @@ a:hover{
 }
 
 #graph-placeholder {
-    margin-top: 500px;
     width: 1px;
     height: 1px;
-    position: sticky;
-    top: 50%;
+    position: absolute;
+    top: 1400px;
     left: 50%;
     z-index: -10;
-    margin-bottom: 400px;
 }
 
 
@@ -269,7 +267,7 @@ a:hover{
 }
 
 .graph-text-divider {
-    padding-top: 600px;
+    padding-top: 800px;
 }
 
 .paper-link-container{
