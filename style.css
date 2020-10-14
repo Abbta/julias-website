@@ -225,10 +225,10 @@ a:hover{
 #graph-placeholder {
     width: 1px;
     height: 1px;
-    position: absolute;
-    top: 1400px;
-    left: 50%;
-    z-index: -10;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
