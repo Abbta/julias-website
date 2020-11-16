@@ -17,8 +17,8 @@ const xAxisMarkerHeight = yAxisMarkerWidth;
 const xAxisTextPadding = yAxisTextPadding;
 const xAxisLetterWidth = 7;
 const xAxisDisplayIndices = [2, 6, 10, 14, 18, 22];
-const xAxisDisplayFirst = 24;
-const xAxisDisplayValuePerIndex = -2;
+const xAxisDisplayFirst = 14;
+const xAxisDisplayValuePerIndex = 2;
 const xAxisText = "Age at parent's layoff";
 const graphTitle = "High school graduation rates by age 19";
 const graphTitleLetterWidth = 11;
@@ -45,9 +45,7 @@ function onLoad()
     const top = document.getElementById("graph-top");
     const left = document.getElementById("graph-left");
     const bot = document.getElementById("graph-bot");
-    console.log(g_file);
-    formatData(g_file, g_data);
-    console.log(g_data);
+    formatData(g_file, g_data);;
     initBackground(svg);
     initTop(top);
     initLeft(left);
@@ -86,9 +84,9 @@ function formatData(file, data)
     {
         file[i] = file[i].split(",");
         data.push(new Object);
-        data[file.length - 1 - i].yValue = parseFloat(file[i][dataYValueIndex]);
-        data[file.length - 1 - i].topValue = parseFloat(file[i][dataTopValueIndex]);
-        data[file.length - 1 - i].botValue = parseFloat(file[i][dataBotValueIndex]);
+        data[i].yValue = parseFloat(file[i][dataYValueIndex]);
+        data[i].topValue = parseFloat(file[i][dataTopValueIndex]);
+        data[i].botValue = parseFloat(file[i][dataBotValueIndex]);
     }
     graphStateArray = [
         [11, data.length - 1],
