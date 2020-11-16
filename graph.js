@@ -84,9 +84,9 @@ function formatData(file, data)
     {
         file[i] = file[i].split(",");
         data.push(new Object);
-        data[i].yValue = parseFloat(file[i][dataYValueIndex]);
-        data[i].topValue = parseFloat(file[i][dataTopValueIndex]);
-        data[i].botValue = parseFloat(file[i][dataBotValueIndex]);
+        data[i - 1].yValue = parseFloat(file[i][dataYValueIndex]);
+        data[i - 1].topValue = parseFloat(file[i][dataTopValueIndex]);
+        data[i - 1].botValue = parseFloat(file[i][dataBotValueIndex]);
     }
     graphStateArray = [
         [11, data.length - 1],
