@@ -80,13 +80,13 @@ const dataBotValueIndex = 3;
 function formatData(file, data)
 {
     file = file.split("#");
-    for (let i = file.length - 1; i >= dataStartIndex; i--)
+    for (let i = dataStartIndex; i < file.length; i++)
     {
         file[i] = file[i].split(",");
         data.push(new Object);
-        data[i - 1].yValue = parseFloat(file[i][dataYValueIndex]);
-        data[i - 1].topValue = parseFloat(file[i][dataTopValueIndex]);
-        data[i - 1].botValue = parseFloat(file[i][dataBotValueIndex]);
+        data[i].yValue = parseFloat(file[i][dataYValueIndex]);
+        data[i].topValue = parseFloat(file[i][dataTopValueIndex]);
+        data[i].botValue = parseFloat(file[i][dataBotValueIndex]);
     }
     graphStateArray = [
         [11, data.length - 1],
