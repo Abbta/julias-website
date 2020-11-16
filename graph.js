@@ -315,7 +315,7 @@ function addText(svg, x, y, rotate = "0", textString) {
 function addBackgroundRect(svg, index)
 {
     var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    rect.setAttributeNS(null, "x", xScale(svg, 15, true));
+    rect.setAttributeNS(null, "x", xScale(svg, 14, true));
     rect.setAttributeNS(null, "y", 0);
     rect.setAttributeNS(null, "width", xScale(svg, index, true));
     rect.setAttributeNS(null, "height", svg.scrollHeight);
