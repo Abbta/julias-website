@@ -132,8 +132,8 @@ function addToGraph(svg, graphState, data) {
 function initSvgElements(svg, data)
 {
     svgElementsContainer.push(new Object);
-    svgElementsContainer[0].rect = addBackgroundRect(svg, graphStateArray[1][1]);
-    svgElementsContainer[0].dashed = addDashedLine(svg, 19);
+    svgElementsContainer[0].rect = addBackgroundRect(svg, yValues.length);
+    svgElementsContainer[0].dashed = addDashedLine(svg, 16.25);
     for (var i = 0; i < data.length; i++) {
         svgElementsContainer.push(new Object);
         var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
@@ -315,7 +315,7 @@ function addText(svg, x, y, rotate = "0", textString) {
 function addBackgroundRect(svg, index)
 {
     var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    rect.setAttributeNS(null, "x", 0);
+    rect.setAttributeNS(null, "x", 20);
     rect.setAttributeNS(null, "y", 0);
     rect.setAttributeNS(null, "width", xScale(svg, index, true));
     rect.setAttributeNS(null, "height", svg.scrollHeight);
