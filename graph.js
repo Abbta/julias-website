@@ -315,7 +315,7 @@ function addText(svg, x, y, rotate = "0", textString) {
 function addBackgroundRect(svg, index)
 {
     var rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-    rect.setAttributeNS(null, "x", xScale(svg, 20, false));
+    rect.setAttributeNS(null, "x", xScale(svg, 17, false));
     rect.setAttributeNS(null, "y", 0);
     rect.setAttributeNS(null, "width", xScale(svg, index, true));
     rect.setAttributeNS(null, "height", svg.scrollHeight);
@@ -327,8 +327,8 @@ function addBackgroundRect(svg, index)
 function addDashedLine(svg, index)
 {
     var line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    line.setAttributeNS(null, "x1", xScale(svg, index, false));
-    line.setAttributeNS(null, "x2", xScale(svg, index, false));
+    line.setAttributeNS(null, "x1", xScale(svg, index-5, false));
+    line.setAttributeNS(null, "x2", xScale(svg, index-5, false));
     line.setAttributeNS(null, "y1", 0);
     line.setAttributeNS(null, "y2", svg.scrollHeight);
     line.setAttributeNS(null, "stroke", "#000000");
